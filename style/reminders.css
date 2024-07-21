@@ -1,0 +1,62 @@
+.reminder-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding-top: 0px;
+  width: 40vw;
+  color: var(--dark);
+  background: var(--light);
+  border-radius: 20px;
+}
+.reminder-container .reminder-header {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  grid-gap: 16px;
+  margin-bottom: 24px;
+  padding: 10px 20px 4px 20px;
+  justify-content: space-between;
+}
+.reminder-container .reminder-tasklist {
+  width: 100%;
+  padding: 0px 20px;
+}
+.reminder-container .reminder-tasklist li {
+  width: 100%;
+  margin-bottom: 16px;
+  background: var(--grey);
+  padding: 14px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reminder-container .reminder-tasklist .reminder-completed {
+  border-left: 10px solid var(--success);
+}
+.reminder-container .reminder-tasklist .reminder-not-completed {
+  border-left: 10px solid var(--danger);
+}
+.reminder-container .reminder-tasklist .reminder-task-title {
+  display: flex;
+  align-items: center;
+}
+.reminder-container .reminder-tasklist .reminder-task-title p {
+  margin-left: 6px;
+}
+
+@media (max-width: 768px) {
+  .reminder-container {
+    width: 75vw;
+    border-radius: 16px;
+  }
+  .reminder-container .reminder-header {
+    padding: 10px 10px 4px 10px;
+  }
+  .reminder-container .reminder-tasklist {
+    padding: 0px 10px;
+  }
+  .reminder-container .reminder-tasklist .reminder-task-title p {
+    font-size: 12px;
+  }
+}

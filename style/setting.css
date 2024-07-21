@@ -1,0 +1,53 @@
+.setting-insights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 16px;
+  margin-top: 36px;
+  padding-bottom: 20px;
+}
+.setting-insights li {
+  padding: 24px;
+  background: var(--primary);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+  cursor: pointer;
+}
+.setting-insights li .setting-card-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.setting-insights li .setting-card-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.setting-insights li .setting-card-info p {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .setting-insights {
+    margin-top: 18px;
+  }
+  .setting-insights li {
+    padding: 16px;
+    grid-gap: 24px;
+  }
+  .setting-insights li .setting-card-icon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .setting-insights li .setting-card-info h3 {
+    font-size: 18px !important;
+  }
+  .setting-insights li .setting-card-info p {
+    font-size: 12px !important;
+  }
+}

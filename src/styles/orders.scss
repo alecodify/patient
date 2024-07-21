@@ -1,0 +1,124 @@
+.order-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    padding-top: 0px;
+    width: 40vw;
+    color: var(--dark);
+    background: var(--light);
+    border-radius: 20px;
+
+    .order-header {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        grid-gap: 16px;
+        margin-bottom: 24px;
+        padding: 10px 20px 4px 20px;
+        justify-content: space-between;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th {
+            padding-bottom: 12px;
+            font-size: 13px;
+            text-align: left;
+            border-bottom: 1px solid var(--grey);
+
+            &:first-child {
+                padding-left: 25px;
+            }
+        }
+
+        tbody {
+
+            tr {
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: var(--grey);
+                }
+
+
+                td {
+                    img {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    &:first-child {
+                        display: flex;
+                        align-items: center;
+                        padding-left: 20px;
+                        gap: 12px;
+                    }
+
+                    .order-status {
+                        font-size: 10px;
+                        padding: 6px 16px;
+                        color: var(--light);
+                        border-radius: 20px;
+                        font-weight: 700;
+                    }
+
+                    .order-complete {
+                        background: var(--success);
+                    }
+
+                    .order-process {
+                        background: var(--primary);
+                    }
+
+                    .order-pending {
+                        background: var(--warning);
+                    }
+                }
+
+            }
+        }
+
+        td {
+            padding: 16px 0;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .order-container {
+        width: 75vw;
+        border-radius: 16px;
+
+        .order-header {
+            padding: 10px 10px 4px 10px;
+        }
+
+        table {
+            th {
+                &:first {
+                    padding-left: 15px !important;
+                }
+            }
+
+            td {
+                &:first {
+                    padding-left: 10px !important;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+
+                .order-status {
+                    padding: 5px 10px !important;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
