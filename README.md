@@ -10,30 +10,30 @@ npm run dev
 ## Screenshots
 ## Laptop
 <div style="display: flex; flex-direction: 'row';">
-<img src="./screenshot/1.png" width=50%>
-<img src="./screenshot/2.png" width=50%>
-<img src="./screenshot/3.png" width=50%>
-<img src="./screenshot/4.png" width=50%>
-<img src="./screenshot/5.png" width=50%>
-<img src="./screenshot/6.png" width=50%>
+<img src="./screenshot/1.png" width=100%>
+<img src="./screenshot/2.png" width=100%>
+<img src="./screenshot/3.png" width=100%>
+<img src="./screenshot/4.png" width=100%>
+<img src="./screenshot/5.png" width=100%>
+<img src="./screenshot/6.png" width=100%>
 </div>
 
 ## Laptop Dark mode
 <div style="display: flex; flex-direction: 'row';">
-<img src="./screenshot/d1.png" width=50%>
-<img src="./screenshot/d2.png" width=50%>
-<img src="./screenshot/d3.png" width=50%>
-<img src="./screenshot/d4.png" width=50%>
-<img src="./screenshot/d5.png" width=50%>
-<img src="./screenshot/d6.png" width=50%>
+<img src="./screenshot/d1.png" width=100%>
+<img src="./screenshot/d2.png" width=100%>
+<img src="./screenshot/d3.png" width=100%>
+<img src="./screenshot/d4.png" width=100%>
+<img src="./screenshot/d5.png" width=100%>
+<img src="./screenshot/d6.png" width=100%>
 </div>
 
 ## Laptop Signin & Signup
 <div style="display: flex; flex-direction: 'row';">
-<img src="./screenshot/s1.png" width=50%>
-<img src="./screenshot/s2.png" width=50%>
-<img src="./screenshot/r1.png" width=50%>
-<img src="./screenshot/r2.png" width=50%>
+<img src="./screenshot/s1.png" width=100%>
+<img src="./screenshot/s2.png" width=100%>
+<img src="./screenshot/r1.png" width=100%>
+<img src="./screenshot/r2.png" width=100%>
 </div>
 
 ## Responsive
@@ -64,10 +64,6 @@ npm run dev
 <img src="./screenshot/mr2.jpg" width=30%>
 </div>
 
-## Vedio
-<div style="display: flex; flex-direction: 'row';">
-<img src="./screenshot/vedio.mp4" width=30%>
-</div>
 
 Source code files are available
 
