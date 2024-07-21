@@ -1,0 +1,51 @@
+.collapsed {
+    width: 60px;
+
+    .logo {
+        .logo-text {
+            display: hidden;
+
+            .logo-name {
+                display: none;
+            }
+        }
+    }
+
+    .side-menu {
+        margin-top: 40px;
+
+        li {
+            a {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.content-container{
+    position: relative;
+    
+    .content{
+        width: calc(100% - 60px);
+        left: 60px;
+
+        main{
+
+            .order-container{
+                width: 45vw !important;
+            }
+
+            .reminder-container{
+                width: 45vw !important;
+            }
+
+            .chat-container{
+                .chatSide{
+                    min-width: 84%;
+                }
+            }
+        }
+    }
+}

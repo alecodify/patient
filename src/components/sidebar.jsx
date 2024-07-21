@@ -5,7 +5,7 @@ import { BiChat, BiGroup, BiSearch, BiLogOutCircle } from "react-icons/bi";
 import { IoDocumentTextOutline, IoSettingsOutline } from "react-icons/io5";
 import "../styles/sidebar.scss";
 
-const Sidebar = () => {
+const Sidebar = ({ isCollapsed }) => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
 
@@ -18,9 +18,10 @@ const Sidebar = () => {
   }
 
   const isActive = (path) => (activeLink === path ? "sidebar-active" : "");
+
   return (
     <div>
-      <div className='sidebar'>
+      <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
         <div className='logo'>
           <Link to="#"><img className='logo-img' src="logo.png" alt="logo" /></Link>
           <Link to="#" className='logo-text'><div className='logo-name'><span>Mon</span>Patient</div></Link>
