@@ -1,0 +1,357 @@
+:root {
+    --white-login: #e9e9e9;
+    --gray-login: #333;
+    --blue-login: #0367a6;
+    --lightblue-login: #008997;
+}
+
+.wrapper {
+    background-color: var(--white);
+    background: url("https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558/Codepen/waldemar-brandt-aThdSdgx0YM-unsplash_cnq4sb.jpg");
+    align-items: center;
+    background-color: var(--white);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    overflow: hidden;
+    width: 100vw;
+
+    .container {
+        background-color: var(--white-login);
+        border-radius: 0.7rem;
+        box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25), 0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+        max-width: 600px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 80vh;
+
+        &.right-panel-active {
+            .signin-container {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            .signup-container {
+                animation: show 0.6s;
+                opacity: 1;
+                transform: translateX(100%);
+                z-index: 5;
+            }
+
+            .overlay-container {
+                transform: translateX(-100%);
+            }
+
+            .overlay {
+                transform: translateX(0%);
+            }
+
+            .overlay-left {
+                transform: translateX(-100%);
+            }
+
+            .overlay-right {
+                right: 0;
+                transform: translateX(100%);
+            }
+        }
+
+        .form-container {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: all 0.6s ease-in-out;
+
+            .form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0 3rem;
+                height: 100%;
+                text-align: center;
+                // background-color: #fff;
+
+                .language-select {
+                    margin-bottom: 70px;
+                }
+
+                .heading {
+                    font-weight: 300;
+                    margin: 0;
+                    margin-bottom: 1.25rem;
+                }
+
+                .private-heading {
+                    margin-bottom: 1rem;
+                }
+
+                .link {
+                    color: var(--gray-login);
+                    font-size: 0.9rem;
+                    margin: 1.5rem 0;
+                    text-decoration: none;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                .input {
+                    background-color: #fff;
+                    border: none;
+                    padding: 0.9rem 0.9rem;
+                    margin: 0.5rem 0;
+                    width: 100%;
+                }
+
+                .private-input {
+                    background-color: #fff;
+                    border: none;
+                    padding: 0.1rem 0.4rem;
+                    margin: 0.4rem 0;
+                    width: 100%;
+                }
+
+                .button {
+                    background-color: var(--secondary);
+                    border-radius: 20px;
+                    position: relative;
+                    top: 85%;
+                    border: 1px solid var(--blue-login);
+                    color: var(--white-login);
+                    cursor: pointer;
+                    font-size: 0.6rem;
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                    padding: 0.8rem 2rem;
+                    text-transform: uppercase;
+                    transition: transform 80ms ease-in;
+                    width: auto;
+
+                    &:active {
+                        transform: scale(0.95);
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .button1 {
+                    background-color: #1C1B3A;
+                    border-radius: 20px;
+                    border: 1px solid var(--blue-login);
+                    color: var(--white-login);
+                    cursor: pointer;
+                    font-size: 0.6rem;
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                    padding: 0.8rem 2rem;
+                    text-transform: uppercase;
+                    transition: transform 80ms ease-in;
+                }
+
+                .signin-btn {
+                    top: 0%;
+                }
+
+                .private-btn {
+                    top: 0%;
+                }
+
+                .button2 {
+                    background-color: #FF2828;
+                    border-radius: 20px;
+                    border: 1px solid var(--blue-login);
+                    color: var(--white-login);
+                    cursor: pointer;
+                    font-size: 0.6rem;
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                    padding: 0.8rem 2.3rem;
+                    text-transform: uppercase;
+                    transition: transform 80ms ease-in;
+                    margin-top: 20px;
+                }
+            }
+
+        }
+
+        .overlay-container {
+            height: 100%;
+            left: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            transition: transform 0.6s ease-in-out;
+            width: 50%;
+            z-index: 100;
+
+            .overlay {
+                height: 100%;
+                width: -100%;
+                position: absolute;
+                transform: translateX(0);
+                transition: transform 0.6s ease-in-out;
+                width: 200%;
+                background-color: #fff;
+
+                .overlay-panel {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    transform: translateX(0);
+                    transition: transform 0.6s ease-in-out;
+                    width: 50%;
+
+                    .button {
+                        background-color: var(--secondary);
+                        border-radius: 20px;
+                        position: relative;
+                        top: 80%;
+                        border: 1px solid var(--blue-login);
+                        color: var(--white-login);
+                        cursor: pointer;
+                        font-size: 0.6rem;
+                        font-weight: bold;
+                        letter-spacing: 0.1rem;
+                        padding: 0.8rem 2rem;
+                        text-transform: uppercase;
+                        transition: transform 80ms ease-in;
+                        width: auto;
+
+                        &:active {
+                            transform: scale(0.95);
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                }
+
+                .overlay-left {
+                    background: url("MonPatient.png");
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    transform: translateX(0%);
+                    position: relative;
+                    top: 0%;
+                    left: 0%;
+                }
+            }
+        }
+
+        .signin-container {
+            left: 0;
+            width: 50%;
+            z-index: 2;
+        }
+
+        .signup-container {
+            left: 0;
+            opacity: 0;
+            width: 50%;
+            z-index: 1;
+        }
+    }
+}
+
+@keyframes show {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+
+        .container {
+            margin-top: -15%;
+            width: 90%;
+            height: 46vh;
+
+            .form-container {
+
+                .form {
+                    padding: 0 1rem;
+
+                    .language-select {
+                        margin-bottom: 50px;
+                    }
+
+                    .link {
+                        font-size: 0.6rem;
+                        margin: 1rem 0;
+                    }
+
+                    .input {
+                        padding: 0.1rem 0.2rem;
+                        margin: 0.3rem 0;
+                    }
+
+                    .private-input {
+                        padding: 0.1rem 0.2rem;
+                        margin: 0.2rem 0;
+                    }
+
+                    .button {
+                        font-size: 0.6rem;
+                        letter-spacing: 0;
+                        padding: 0.4rem 1.5rem;
+                    }
+
+                    .button1 {
+                        font-size: 0.6rem;
+                        letter-spacing: 0;
+                        padding: 0.4rem 1.5rem;
+                    }
+
+                    .button2 {
+                        font-size: 0.6rem;
+                        letter-spacing: 0;
+                        padding: 0.4rem 1.5rem;
+                    }
+                }
+            }
+
+            .overlay-container {
+
+                .overlay {
+
+                    .overlay-panel {
+
+                        .button {
+                            top: 75%;
+                            font-size: 0.6rem;
+                            letter-spacing: 0;
+                            padding: 0.4rem 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
