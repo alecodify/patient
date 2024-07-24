@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { MdOutlineMenu } from "react-icons/md";
 import { BsBell } from "react-icons/bs";
 import { BiChat } from "react-icons/bi";
@@ -7,6 +7,7 @@ import "../styles/navbar.scss";
 
 const Navbar = ({ toggleDarkMode, darkMode, toggleSidebar }) => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleTheme = () => {
     toggleDarkMode();
@@ -26,7 +27,7 @@ const Navbar = ({ toggleDarkMode, darkMode, toggleSidebar }) => {
               <input type="checkbox" id="theme-toggle" class="toggle-checkbox" onChange={handleTheme} checked={darkMode} />
               <label for="theme-toggle" class="toggle-label"></label>
             </div>
-            <Link to={"#"} className='profile'><BiChat size={24} className='chat icon' /></Link>
+            <Link to={"/"} className='profile'><BiChat size={24} className='chat icon' onClick={() => { navigate("/")}} /></Link>
             <Link to={"#"} className='notif'><BsBell size={24} className='bell icon' /><span className='count'>12</span></Link>
             <Link to={"#"} className='profile'><FaRegUserCircle size={24} className='user-circle icon' /></Link>
           </div>
